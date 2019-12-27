@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+
+        <record id="view_vit_bakn_form" model="ir.ui.view">
+            <field name="name">vit_bakn.bakn.form</field>
+            <field name="model">vit_bakn.bakn</field>
+            <field name="inherit_id" ref="vit_bakn.view_vit_bakn_bakn_form"/>
+            <field name="arch" type="xml">
+                <field name="place" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_vit_bakn_tree" model="ir.ui.view">
+            <field name="name">vit_bakn.bakn.tree</field>
+            <field name="model">vit_bakn.bakn</field>
+            <field name="inherit_id" ref="vit_bakn.view_vit_bakn_bakn_tree"/>
+            <field name="arch" type="xml">
+                <field name="place" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

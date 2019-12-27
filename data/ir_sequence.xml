@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data> 
+
+		<function name="write" model="ir.model.data">
+            <!-- First we need to find the record...-->
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'sale'), ('name', '=', 'seq_sale_order')]"/>
+            </function>
+
+           <!-- ...and temporarily set the noupdate field to False-->
+            <value eval="{'noupdate': False}" />
+        </function>
+
+		<!-- Get our main job done, i.e. modify the domain_force field of a record -->
+		<record id="sale.seq_sale_order" model="ir.sequence">
+			<field name="prefix">SSO-%(company)s-%(location)s-%(unit)s-%(year)s-%(month)s-</field>
+		</record>
+
+		<!-- (Optional) Time to clean our dirty hand, set the previously noupdate False to True again -->
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'sale'), ('name', '=', 'seq_sale_order')]"/>
+            </function>
+            <value eval="{'noupdate': True}" />
+        </function>
+
+	</data>
+</odoo>

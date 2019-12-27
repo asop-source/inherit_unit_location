@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vit_dinamic_sequence,vit_dinamic_sequence,model_res_company,,1,1,1,1
+access_vit_dinamic_analytic,vit_dinamic_analytic,model_account_analytic_tag,,1,1,1,1
+access_vit_dinamic_order,vit_dinamic_order,model_purchase_order,,1,1,1,1
+access_vit_dinamic_hr_departement,vit_dinamic_hr_departement,model_hr_department,,1,1,1,1
+access_vit_dinamic_project_project,vit_dinamic_project_project,model_project_project,,1,1,1,1
+access_vit_dinamic_sale_order,vit_dinamic_sale_order,model_sale_order,,1,1,1,1
+access_vit_dinamic_vit_uudp,vit_dinamic_vit_uudp,model_uudp,,1,1,1,1
+access_vit_dinamic_product_template,vit_dinamic_product_template,model_product_template,,1,1,1,1
+access_vit_dinamic_vit_budget_cut,vit_dinamic_vit_budget_cut,model_vit_budget_cut,,1,1,1,1
+access_vit_dinamic_vit_relokasi_budget,vit_dinamic_vit_relokasi_budget,model_vit_relokasi_budget,,1,1,1,1
+access_vit_dinamic_vit_bakn,vit_dinamic_vit_bakn,model_vit_bakn_bakn,,1,0,0,0

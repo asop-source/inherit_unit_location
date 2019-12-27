@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+    	 <record id="view_sale_order_data_form" model="ir.ui.view">
+            <field name="name">sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                     <field name="unit_id" />
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+         <record id="view_sale_order_data_tree" model="ir.ui.view">
+            <field name="name">sale.order.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                     <field name="unit_id" />
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_sale_order_data_dashboard" model="ir.ui.view">
+            <field name="name">sale.order.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                     <field name="unit_id" />
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

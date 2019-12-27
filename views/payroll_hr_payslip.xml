@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+
+        <record id="view_hr_payslip_viewe" model="ir.ui.view">
+            <field name="name">hr.payslip</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='credit_note'][last()]" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_project_form" model="ir.ui.view">
+            <field name="name">hr.payslip.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

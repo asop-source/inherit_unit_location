@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+
+        <record id="view_relok_budget_viewe" model="ir.ui.view">
+            <field name="name">vit.relokasi_budget</field>
+            <field name="model">vit.relokasi_budget</field>
+            <field name="inherit_id" ref="vit_budget_relokasi.view_vit_relokasi_budget_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='to_budget_line_id'][last()]" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_relok_budget_tree" model="ir.ui.view">
+            <field name="name">vit.relokasi_budget.list</field>
+            <field name="model">vit.relokasi_budget</field>
+            <field name="inherit_id" ref="vit_budget_relokasi.view_vit_relokasi_budget_tree"/>
+            <field name="arch" type="xml">
+                <field name="notes" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

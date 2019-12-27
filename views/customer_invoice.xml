@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+
+        <record id="view_customer_invoice_form" model="ir.ui.view">
+            <field name="name">account.invoice</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id'][last()]" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_customer_invoice_tree" model="ir.ui.view">
+            <field name="name">account.invoice.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree_with_onboarding"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                     <field name="unit_id"/>
+                     <field name="analytic_tag_ids" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
